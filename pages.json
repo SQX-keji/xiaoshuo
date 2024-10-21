@@ -1,0 +1,199 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+
+			}
+
+		}, {
+			"path": "pages/bookshelf/bookshelf",
+			"style": {
+				"navigationBarTitleText": "书架",
+				"enablePullDownRefresh": true
+					// #ifdef H5
+					,
+				"navigationStyle": "custom"
+				// #endif 
+			}
+
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+					// #ifdef H5
+					,
+				"navigationStyle": "custom"
+				// #endif 
+			}
+		}, {
+			"path": "pages/login/loginPhone",
+			"style": {
+				"navigationBarTitleText": "登录"
+					// #ifdef H5
+					,
+				"navigationStyle": "custom"
+				// #endif 
+
+			}
+		}, {
+			"path": "pages/login/bind",
+			"style": {
+				"navigationBarTitleText": "绑定手机号"
+					// #ifdef H5
+					,
+				"navigationStyle": "custom"
+				// #endif 
+			}
+		},
+		{
+			"path": "pages/login/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+					// #ifdef H5
+					,
+				"navigationStyle": "custom"
+				// #endif 
+			}
+		},
+		{
+			"path": "pages/login/forgetPwd",
+			"style": {
+				"navigationBarTitleText": "重置密码"
+					// #ifdef H5
+					,
+				"navigationStyle": "custom"
+				// #endif 
+			}
+		},
+		{
+			"path": "pages/moreBook/moreBook",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true
+					// #ifdef H5
+					,
+				"navigationStyle": "custom"
+				// #endif 
+			}
+		}
+	],
+	"subPackages": [{
+		"root": "package",
+		"pages": [{
+				"path": "bookDetails/bookDetails",
+				"style": {
+					"navigationBarTitleText": "书籍详情",
+					"navigationBarBackgroundColor": "#fef0f2",
+					"navigationBarTextStyle": "black"
+						// #ifdef H5
+						,
+					"navigationStyle": "custom"
+					// #endif 
+				}
+			}, {
+				"path": "bookDetails/comment",
+				"style": {
+					"navigationBarTitleText": "书籍评论",
+					"enablePullDownRefresh": true
+						// #ifdef H5
+						,
+					"navigationStyle": "custom"
+					// #endif 
+				}
+
+			}, {
+				"path": "bookDetails/bookList",
+				"style": {
+					"navigationBarTitleText": "章节目录",
+					"enablePullDownRefresh": false,
+					"onReachBottomDistance": 100
+						// #ifdef H5
+						,
+					"navigationStyle": "custom"
+					// #endif 
+				}
+
+			}, {
+				"path": "read/read",
+				"style": {
+					"navigationBarTitleText": "",
+					"enablePullDownRefresh": false,
+					"navigationStyle": "custom",
+					"app-plus": {
+						"bounce": "none"
+					}
+
+				}
+
+			},
+			{
+				"path": "classifty/classifty",
+				"style": {
+					"navigationBarTitleText": "分类",
+					"enablePullDownRefresh": false
+						// #ifdef H5
+						,
+					"navigationStyle": "custom"
+					// #endif 
+				}
+			},
+			{
+				"path": "payOrder/payOrder",
+				"style": {
+					"navigationBarTitleText": "购买",
+					"enablePullDownRefresh": false
+						// #ifdef H5
+						,
+					"navigationStyle": "custom"
+					// #endif 
+				}
+			}
+
+		]
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#F5F5F5"
+	},
+	"tabBar": {
+		"color": "#333333",
+		"selectedColor": "#FF6730",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabbar/index.png",
+				"selectedIconPath": "static/tabbar/index_.png",
+				"text": "首页"
+			}, {
+				"pagePath": "pages/bookshelf/bookshelf",
+				"iconPath": "static/tabbar/myBook.png",
+				"selectedIconPath": "static/tabbar/myBook_.png",
+				"text": "书架"
+			}, {
+				"pagePath": "pages/my/my",
+				"iconPath": "static/tabbar/my.png",
+				"selectedIconPath": "static/tabbar/my_.png",
+				"text": "我的"
+			}
+
+		]
+	},
+	"uniIdRouter": {}
+}
